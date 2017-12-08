@@ -1,8 +1,8 @@
 'use strict';
 
-require('./styles.css');
-
-require('./index.html');
+import 'bulma/css/bulma.css';
+import './styles.css';
+import './index.html';
 
 var Elm = require('./Main.elm');
 var mountNode = document.getElementById('main');

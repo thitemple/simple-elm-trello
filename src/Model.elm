@@ -1,12 +1,18 @@
 module Model exposing (Model, initialModel)
 
-import Types exposing (Board)
+import Types
+    exposing
+        ( Board
+        , CreateBoardState(..)
+        )
 
 
 type alias Model =
-    { boards : List Board }
+    { boards : List Board
+    , createBoard : CreateBoardState
+    }
 
 
 initialModel : Model
 initialModel =
-    { boards = [] }
+    { boards = [], createBoard = Create }
