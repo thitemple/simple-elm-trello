@@ -5,6 +5,11 @@ type alias Board =
     { name : String }
 
 
+board : Board
+board =
+    { name = "" }
+
+
 type CreateBoardState
     = Create
-    | Creating
+    | Creating Board
