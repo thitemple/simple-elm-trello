@@ -1,7 +1,6 @@
 'use strict';
 
-import 'bulma/css/bulma.css';
-import './styles.css';
+import './styles.scss';
 import './index.html';
 
 var Elm = require('./Main.elm');
