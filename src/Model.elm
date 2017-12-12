@@ -13,6 +13,6 @@ type alias Model =
     }
 
 
-initialModel : Model
-initialModel =
-    { boards = [], createBoard = Create }
+initialModel : List Board -> Model
+initialModel boards =
+    { boards = boards, createBoard = Create }
