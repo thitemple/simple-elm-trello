@@ -2,6 +2,7 @@ module Update exposing (update)
 
 import Model exposing (Model)
 import Msgs exposing (Msg(..))
+import Ports exposing (storeBoards)
 import Types exposing (CreateBoardState(..), board)
 
 
@@ -21,4 +22,8 @@ update msg model =
             { model | createBoard = Creating { name = newBoard } } ! []
 
         CreateBoard board ->
-            { model | boards = model.boards ++ [ board ], createBoard = Create } ! []
+            let
+                boards =
+                    model.boards ++ [ board ]
+            in
+            { model | boards = boards, createBoard = Create } ! [ storeBoards boards ]
