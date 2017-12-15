@@ -8,8 +8,3 @@ type alias Board =
 board : Board
 board =
     { name = "" }
-
-
-type CreateBoardState
-    = Create
-    | Creating Board
